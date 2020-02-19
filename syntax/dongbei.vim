@@ -17,9 +17,12 @@ syn match   dongbeiConstant         "鸭\s*蛋"
 
 syn match   dongbeiSpecial          "活\s*雷\s*锋"
 syn match   dongbeiSpecial          "啥\s*也\s*不\s*是"
-syn match   dongbeiSpecial          "最\s*高\s*指\s*示"
-syn match   dongbeiSpecial          "俺"
-syn match   dongbeiSpecial          "路\s*银"
+syn match   dongbeiSpecial          "[装削整]"
+
+syn match   dongbeiStructure        "最\s*高\s*指\s*示"
+syn match   dongbeiStructure        "俺\s*的"
+syn match   dongbeiStructure        "领\s*导\s*的"
+syn match   dongbeiStructure        "路\s*银"
 
 syn match   dongbeiSymbolOperator   "[，、。！？的]"
 syn match   dongbeiSymbolOperator   "[「」]"
@@ -35,22 +38,19 @@ syn match   dongbeiFunction         "你\s*吱\s*声"
 syn match   dongbeiFunction         "掐\s*头"
 syn match   dongbeiFunction         "去\s*尾"
 syn match   dongbeiFunction         "有\s*几\s*个\s*坑"
+syn match   dongbeiFunction         "新\s*对\s*象"
 
-syn match   dongbeiStatement        "[装削整]"
 syn match   dongbeiStatement        "炮\s*决"
 syn match   dongbeiStatement        "滚\s*犊\s*子\s*吧"
 syn match   dongbeiStatement        "接\s*着\s*磨\s*叽"
 syn match   dongbeiStatement        "尥\s*蹶\s*子"
 syn match   dongbeiStatement        "抱\s*团"
-" syn match   dongbeiStatement        "整" nextgroup=dongbeiFunction skipwhite
 
-" syn match   dongbeiStatement        "是\s*活\s*雷\s*锋"
-syn match   dongbeiStatement        "都*\s*是\s*活\s*雷\s*锋"
+syn match   dongbeiStatement        "都\{0,1}\s*是\s*活\s*雷\s*锋"
 syn match   dongbeiStatement        "来\s*了\s*[个群]"
 
 syn match   dongbeiStatement        "阶\s*级"
 syn match   dongbeiStatement        "的\s*接\s*班\s*银"
-syn match   dongbeiStatement        "的*\s*新\s*对\s*象"
 
 " TODO:
 syn match   dongbeiException        "保\s*准"
@@ -108,7 +108,7 @@ syn match   dongbeiComment          "#.*$"  contains=dongbeiTodo
 hi def link dongbeiSymbolOperator   dongbeiOperator
 hi def link dongbeiBegin        dongbeiRepeat
 hi def link dongbeiEnd          dongbeiRepeat
-hi def link dongbeiCompare      dongbeiStatement
+hi def link dongbeiCompare      dongbeiSpecial
 
 hi def link dongbeiInclude      Include
 hi def link dongbeiSpecial      Special
@@ -116,6 +116,7 @@ hi def link dongbeiBoolean      Boolean
 hi def link dongbeiComment      Comment
 hi def link dongbeiConditional  Conditional
 hi def link dongbeiConstant     Constant
+hi def link dongbeiStructure    Structure
 hi def link dongbeiIdentifier   Identifier
 hi def link dongbeiException    Exception
 hi def link dongbeiFunction     Function
