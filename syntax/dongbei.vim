@@ -19,6 +19,16 @@ syn match   dongbeiSpecial          "活\s*雷\s*锋"
 syn match   dongbeiSpecial          "啥\s*也\s*不\s*是"
 syn match   dongbeiSpecial          "[装削整]"
 
+syn match   dongbeiIdentifier       "【[^#]\{-1,}】"
+syn match   dongbeiFunction         "\(整\)\@<=\s*\zs[^#]\{-1,}\ze\s*[（、。！]"
+syn match   dongbeiFunction         "^\s*\zs[^#]\{-1,}\ze\s*\(（[^#]*）\)\=\(阶\s*级\)\@<!\s*咋\s*整\s*："
+
+" TODO, some of these matches are buggy
+" syn match   dongbeiVariable         "\(削\)\@<=\s*\zs[^#]\{-1,}\ze\s*[。！]"
+" syn match   dongbeiVariable         "\s*\zs[^#]\{-1,}\ze\s*[装从在]"
+" syn match   dongbeiVariable         "\s*\zs[^#]\{-1,}\ze\s*是\s*活\s*雷\s*锋"
+" syn match   dongbeiVariable         "\s*\zs[^#]\{-1,}\ze\s*都\s*是\s*活\s*雷\s*锋"
+
 syn match   dongbeiStructure        "最\s*高\s*指\s*示"
 syn match   dongbeiStructure        "俺\s*的"
 syn match   dongbeiStructure        "领\s*导\s*的"
@@ -33,7 +43,7 @@ syn match   dongbeiCompare          "还\s*小"
 syn match   dongbeiCompare          "一\s*样\s*一\s*样\s*的"
 syn match   dongbeiCompare          "不\s*是\s*一\s*样\s*一\s*样\s*的"
 
-syn match   dongbeiFunction         "唠\s*唠"
+syn match   dongbeiFunction         "唠\s*唠[:：]"
 syn match   dongbeiFunction         "你\s*吱\s*声"
 syn match   dongbeiFunction         "掐\s*头"
 syn match   dongbeiFunction         "去\s*尾"
@@ -46,24 +56,15 @@ syn match   dongbeiStatement        "接\s*着\s*磨\s*叽"
 syn match   dongbeiStatement        "尥\s*蹶\s*子"
 syn match   dongbeiStatement        "抱\s*团"
 
-syn match   dongbeiStatement        "都\{0,1}\s*是\s*活\s*雷\s*锋"
+syn match   dongbeiStatement        "都\=\s*是\s*活\s*雷\s*锋"
 syn match   dongbeiStatement        "来\s*了\s*[个群]"
 
 syn match   dongbeiStatement        "阶\s*级"
 syn match   dongbeiStatement        "的\s*接\s*班\s*银"
 
-" TODO:
 syn match   dongbeiException        "保\s*准"
 syn match   dongbeiException        "辟\s*谣"
 syn match   dongbeiError            "整\s*叉\s*劈\s*了\s*[:：]"
-
-syn match   dongbeiBegin            "咋\s*整\s*[:：]"
-syn match   dongbeiBegin            "开\s*整\s*[:：]"
-syn match   dongbeiEnd              "整\s*完\s*了"
-syn match   dongbeiBegin            "磨\s*叽\s*[:：]"
-syn match   dongbeiBegin            "从\s*一\s*而\s*终\s*磨\s*叽\s*[:：]"
-syn match   dongbeiBegin            "在\s*苹\s*果\s*总\s*部\s*磨\s*叽\s*[:：]"
-syn match   dongbeiEnd              "磨\s*叽\s*完\s*了"
 
 syn match   dongbeiConditional      "寻\s*思\s*[:：]"
 syn match   dongbeiConditional      "要\s*行\s*咧\s*就"
@@ -77,14 +78,19 @@ syn match   dongbeiOperator         "刨\s*掉\s*一\s*堆\s*堆"
 syn match   dongbeiOperator         "拉\s*饥\s*荒"
 syn match   dongbeiOperator         "稍\s*稍"
 syn match   dongbeiOperator         "走\s*走"
-syn match   dongbeiOperator         "稍.*步" contains=dongbeiConstant,dongbeiNumber
-syn match   dongbeiOperator         "走.*步" contains=dongbeiConstant,dongbeiNumber
+syn match   dongbeiOperator         "稍[^#]*步" contains=dongbeiConstant,dongbeiNumber
+syn match   dongbeiOperator         "走[^#]*步" contains=dongbeiConstant,dongbeiNumber
 
 syn match   dongbeiOperator         "的\s*老"
 syn match   dongbeiOperator         "的\s*老\s*[大幺]"
 
-" TODO:
-syn match   dongbeiIdentifier       "【.*】"
+syn match   dongbeiBegin            "咋\s*整\s*[:：]"
+syn match   dongbeiBegin            "开\s*整\s*[:：]"
+syn match   dongbeiEnd              "整\s*完\s*了"
+syn match   dongbeiBegin            "磨\s*叽\s*[:：]"
+syn match   dongbeiBegin            "从\s*一\s*而\s*终\s*磨\s*叽\s*[:：]"
+syn match   dongbeiBegin            "在\s*苹\s*果\s*总\s*部\s*磨\s*叽\s*[:：]"
+syn match   dongbeiEnd              "磨\s*叽\s*完\s*了"
 
 
 " Standard numbers from python.vim
