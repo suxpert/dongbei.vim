@@ -18,16 +18,18 @@ syn match   dongbeiConstant         "鸭\s*蛋"
 syn match   dongbeiSpecial          "活\s*雷\s*锋"
 syn match   dongbeiSpecial          "啥\s*也\s*不\s*是"
 syn match   dongbeiSpecial          "[装削整]"
+syn match   dongbeiSpecial          "炮\s*决"
 
 syn match   dongbeiIdentifier       "【[^#]\{-1,}】"
 syn match   dongbeiFunction         "\(整\)\@<=\s*\zs[^#]\{-1,}\ze\s*[（、。！]"
 syn match   dongbeiFunction         "^\s*\zs[^#]\{-1,}\ze\s*\(（[^#]*）\)\=\(阶\s*级\)\@<!\s*咋\s*整\s*："
 
-" TODO, some of these matches are buggy
-" syn match   dongbeiVariable         "\(削\)\@<=\s*\zs[^#]\{-1,}\ze\s*[。！]"
-" syn match   dongbeiVariable         "\s*\zs[^#]\{-1,}\ze\s*[装从在]"
-" syn match   dongbeiVariable         "\s*\zs[^#]\{-1,}\ze\s*是\s*活\s*雷\s*锋"
-" syn match   dongbeiVariable         "\s*\zs[^#]\{-1,}\ze\s*都\s*是\s*活\s*雷\s*锋"
+" TODO, some of these matches might be buggy
+syn match   dongbeiVariable         "\(削\|炮\s*决\)\@<=\s*\zs[^#]\{-1,}\ze\s*[。！]"
+syn match   dongbeiVariable         "^\s*\zs[^#]\{-1,}\ze\s*[装从在]"
+syn match   dongbeiVariable         "^\s*\zs[^#]\{-1,}\ze\s*来\s*了\s*[个群]"
+syn match   dongbeiVariable         "^\s*\zs[^#]\{-1,}\ze\s*是\s*活\s*雷\s*锋"
+syn match   dongbeiVariable         "^\s*\zs[^#]\{-1,}\ze\s*都\s*是\s*活\s*雷\s*锋"
 
 syn match   dongbeiStructure        "最\s*高\s*指\s*示"
 syn match   dongbeiStructure        "俺\s*的"
@@ -50,7 +52,6 @@ syn match   dongbeiFunction         "去\s*尾"
 syn match   dongbeiFunction         "有\s*几\s*个\s*坑"
 syn match   dongbeiFunction         "新\s*对\s*象"
 
-syn match   dongbeiStatement        "炮\s*决"
 syn match   dongbeiStatement        "滚\s*犊\s*子\s*吧"
 syn match   dongbeiStatement        "接\s*着\s*磨\s*叽"
 syn match   dongbeiStatement        "尥\s*蹶\s*子"
