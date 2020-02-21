@@ -25,11 +25,11 @@ syn match   dongbeiFunction         "\(整\)\@<=\s*\zs[^#]\{-1,}\ze\s*[（、。
 syn match   dongbeiFunction         "^\s*\zs[^#]\{-1,}\ze\s*\(（[^#]*）\)\=\(阶\s*级\)\@<!\s*咋\s*整\s*："
 
 " TODO, some of these matches might be buggy
-syn match   dongbeiVariable         "\(削\|炮\s*决\)\@<=\s*\zs[^#]\{-1,}\ze\s*[。！]"
-syn match   dongbeiVariable         "^\s*\zs[^#]\{-1,}\ze\s*[装从在]"
-syn match   dongbeiVariable         "^\s*\zs[^#]\{-1,}\ze\s*来\s*了\s*[个群]"
-syn match   dongbeiVariable         "^\s*\zs[^#]\{-1,}\ze\s*是\s*活\s*雷\s*锋"
-syn match   dongbeiVariable         "^\s*\zs[^#]\{-1,}\ze\s*都\s*是\s*活\s*雷\s*锋"
+" syn match   dongbeiVariable         "\(削\|炮\s*决\)\@<=\s*\zs[^#的]\{-1,}\ze\s*[。！]"
+" syn match   dongbeiVariable         "^\s*\zs[^#的]\{-1,}\ze\s*[装从在]"
+" syn match   dongbeiVariable         "^\s*\zs[^#的]\{-1,}\ze\s*来\s*了\s*[个群]"
+" syn match   dongbeiVariable         "^\s*\zs[^#的]\{-1,}\ze\s*是\s*活\s*雷\s*锋"
+" syn match   dongbeiVariable         "^\s*\zs[^#的]\{-1,}\ze\s*都\s*是\s*活\s*雷\s*锋"
 
 syn match   dongbeiStructure        "最\s*高\s*指\s*示"
 syn match   dongbeiStructure        "俺\s*的"
@@ -40,10 +40,8 @@ syn match   dongbeiSymbolOperator   "[，、。！？的]"
 syn match   dongbeiSymbolOperator   "[「」]"
 syn match   dongbeiSymbolOperator   "[（）]"
 
-syn match   dongbeiCompare          "还\s*大"
-syn match   dongbeiCompare          "还\s*小"
-syn match   dongbeiCompare          "一\s*样\s*一\s*样\s*的"
-syn match   dongbeiCompare          "不\s*是\s*一\s*样\s*一\s*样\s*的"
+syn match   dongbeiCompare          "还\s*[大小]"
+syn match   dongbeiCompare          "\(不\s*是\s*\)\=一\s*样\s*一\s*样\s*的"
 
 syn match   dongbeiFunction         "唠\s*唠[:：]"
 syn match   dongbeiFunction         "你\s*吱\s*声"
@@ -68,13 +66,11 @@ syn match   dongbeiException        "辟\s*谣"
 syn match   dongbeiError            "整\s*叉\s*劈\s*了\s*[:：]"
 
 syn match   dongbeiConditional      "寻\s*思\s*[:：]"
-syn match   dongbeiConditional      "要\s*行\s*咧\s*就"
-syn match   dongbeiConditional      "要\s*不\s*行\s*咧\s*就"
+syn match   dongbeiConditional      "要\s*不\=\s*行\s*咧\s*就"
 
 syn match   dongbeiOperator         "[从到在比跟]"
 syn match   dongbeiOperator         "[加减乘]"
-syn match   dongbeiOperator         "除\s*以"
-syn match   dongbeiOperator         "齐\s*整\s*整\s*地\s*除\s*以"
+syn match   dongbeiOperator         "\(齐\s*整\s*整\s*地\s*\)\=除\s*以"
 syn match   dongbeiOperator         "刨\s*掉\s*一\s*堆\s*堆"
 syn match   dongbeiOperator         "拉\s*饥\s*荒"
 syn match   dongbeiOperator         "稍\s*稍"
@@ -82,11 +78,9 @@ syn match   dongbeiOperator         "走\s*走"
 syn match   dongbeiOperator         "稍[^#]*步" contains=dongbeiConstant,dongbeiNumber
 syn match   dongbeiOperator         "走[^#]*步" contains=dongbeiConstant,dongbeiNumber
 
-syn match   dongbeiOperator         "的\s*老"
-syn match   dongbeiOperator         "的\s*老\s*[大幺]"
+syn match   dongbeiOperator         "的\s*老\(\s*[大幺]\)\="
 
-syn match   dongbeiBegin            "咋\s*整\s*[:：]"
-syn match   dongbeiBegin            "开\s*整\s*[:：]"
+syn match   dongbeiBegin            "[咋开]\s*整\s*[:：]"
 syn match   dongbeiEnd              "整\s*完\s*了"
 syn match   dongbeiBegin            "磨\s*叽\s*[:：]"
 syn match   dongbeiBegin            "从\s*一\s*而\s*终\s*磨\s*叽\s*[:：]"
