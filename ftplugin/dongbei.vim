@@ -34,6 +34,11 @@ if exists("loaded_matchit")
     let b:match_skip   = 's:comment\|string'
 endif
 
+if exists("g:neosnippet#snippets_directory")
+    let s:path = expand('<sfile>:p:h')
+    let g:neosnippet#snippets_directory .= ',' . s:path . '/../snippets'
+endif
+
 " Undo the stuff we changed.
 let b:undo_ftplugin = "unlet! b:match_words"
 
