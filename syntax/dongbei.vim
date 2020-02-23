@@ -82,9 +82,7 @@ syn match   dongbeiOperator         "的\s*老\(\s*[大幺]\)\="
 
 syn match   dongbeiBegin            "[咋开]\s*整\s*[:：]"
 syn match   dongbeiEnd              "整\s*完\s*了"
-syn match   dongbeiBegin            "磨\s*叽\s*[:：]"
-syn match   dongbeiBegin            "从\s*一\s*而\s*终\s*磨\s*叽\s*[:：]"
-syn match   dongbeiBegin            "在\s*苹\s*果\s*总\s*部\s*磨\s*叽\s*[:：]"
+syn match   dongbeiBegin            "\(从\s*一\s*而\s*终\|在\s*苹\s*果\s*总\s*部\)\=\s*磨\s*叽\s*[:：]"
 syn match   dongbeiEnd              "磨\s*叽\s*完\s*了"
 
 
