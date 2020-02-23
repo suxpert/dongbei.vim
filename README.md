@@ -2,7 +2,7 @@
 
 [东北话编程](https://github.com/zhanyong-wan/dongbei) vim/neovim 语法高亮插件。
 
-![瞅瞅啥效果啊](doc/screenshot.png)
+![瞅瞅啥效果啊](doc/screencast.gif)
 
 # 食用方法
 - [vim-plug](https://github.com/junegunn/vim-plug) 用户：
