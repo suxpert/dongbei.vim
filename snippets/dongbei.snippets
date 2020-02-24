@@ -1,5 +1,5 @@
 # Language snippets file
-# Language: dongbei
+# Language: dongbei-lang
 
 snippet #!
 	#!/usr/bin/env dongbei
@@ -10,74 +10,123 @@ snippet imp import
 	翠花，上 ${1:sys.io}
 	${0}
 
-snippet true
+snippet arg
+	最高指示
+
+snippet T true
 	没毛病
-
-snippet false
+snippet F false
 	有毛病
-
 snippet 0
 	鸭蛋
 
+snippet con continue
+	接着磨叽。
+snippet brk break
+	尥蹶子！
 snippet ret return
 	滚犊子吧${0}！
 
-snippet ==
-	跟 ${1} 一样一样的
+snippet var
+	${1:var}是活雷锋。${0}
+snippet list
+	${1:list}都是活雷锋。${0}
+snippet len
+	有几个坑
 
-snippet >
-	比 ${1} 还大
+snippet del delete
+	炮决
+snippet app append
+	来了个
+snippet ext extend
+	来了群
+snippet cdr remove head
+	掐头
+snippet drp remove tail
+	去尾
 
-snippet <
-	比 ${1} 还小
-
-snippet {}
-	开整：
-	    ${1}
-	整完了。${0}
-
-snippet super
-	领导的
-
-snippet self
-	俺的
+snippet _
+	的老
+snippet _1
+	的老大
+snippet _0
+	的老幺
 
 snippet =
 	装
-
+snippet +
+	加
+snippet -
+	减
+snippet 0-
+	拉饥荒
+snippet *
+	乘
+snippet /
+	除以
+snippet //
+	齐整整地除以
+snippet %
+	刨掉一堆堆
 snippet ++
 	走走
-
 snippet +=
-	走 ${1} 步${0}
-
+	走 ${1:两} 步${0}
 snippet --
 	稍稍
-
 snippet -=
-	稍 ${1} 步${0}
+	稍 ${1:两} 步${0}
 
+snippet ==
+	跟 ${1:0} 一样一样的
+snippet !=
+	跟 ${1:0} 不是一样一样的
+snippet >
+	比 ${1:0} 还大
+snippet <
+	比 ${1:0} 还小
+
+snippet sup
+	领导的
+snippet self
+	俺的
 snippet .
 	的
 
 snippet pr print
 	唠唠：
+snippet inp input
+	你吱声（${1}）${0}
+
+snippet []
+	路银「${1}」${0}
+snippet )
+	${1} 抱团${0}
+snippet ()
+	（${1}）${0}
+snippet {}
+	开整：
+	    ${1}
+	整完了。${0}
 
 # New Class
 snippet cl class
-	无产阶级的接班人 ${1:name}阶级 咋整：
+	无产阶级的接班银 ${1:name}阶级 咋整：
 		新对象（${2:args}）咋整：
 		    俺的 ${3} 装 ${4}。
 		整完了。${5}
 	整完了。${0}
 
 snippet cla class
-	${1:super}阶级的接班人 ${2:name}阶级 咋整：
+	${1:super}阶级的接班银 ${2:name}阶级 咋整：
 		新对象（${3:args}）咋整：
 		    整 领导的 新对象（${4:args}）。
 		    俺的 ${5} 装 ${6}。
 		整完了。${7}
 	整完了。${0}
+
+snippet new
+	${1:class}的新对象${0}
 
 # New Function
 snippet def function
@@ -110,7 +159,6 @@ snippet for
 snippet dowh
 	${1:item} 从一而终磨叽：
 		${2}
-		if${3}
 	磨叽完了。${0}
 
 snippet fori
