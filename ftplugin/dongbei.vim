@@ -20,13 +20,14 @@ setlocal shiftwidth=4
 
 setlocal matchpairs+=【:】,“:”,「:」,（:）
 
+" insert mode key maps
 inoremap <buffer> ' “”<left>
 inoremap <buffer> \ 、
 inoremap <buffer> , ，
-inoremap <buffer> ! ！
 inoremap <buffer> ? ？
 inoremap <buffer> % 刨掉一堆堆
-" The following map conflict with snippets
+" The following maps are conflict with snippets
+" inoremap <buffer> ! ！
 " inoremap <buffer> = 装
 " inoremap <buffer> + 加
 " inoremap <buffer> - 减
@@ -34,6 +35,7 @@ inoremap <buffer> % 刨掉一堆堆
 " inoremap <buffer> / 除以
 " inoremap <buffer> _ 的老
 
+" matchit/matchup support
 if exists("loaded_matchit")
     " TODO: 滚犊子吧 should only match 咋整
     " let b:match_words  = '[咋开]\s*整\s*[\:：]:滚\s*犊\s*子\s*吧:整\s*完\s*了\s*[。！]'
@@ -50,6 +52,7 @@ if exists("loaded_matchit")
     let b:match_skip   = 's:comment\|string'
 endif
 
+" add snippet support with neosnippet
 if exists("g:neosnippet#snippets_directory")
     let s:path = expand('<sfile>:p:h')
     let g:neosnippet#snippets_directory .= ',' . s:path . '/../snippets'

@@ -1,8 +1,13 @@
 # dongbei-vim
 
-[东北话编程](https://github.com/zhanyong-wan/dongbei) vim/neovim 语法高亮插件。
+[东北话编程](https://github.com/zhanyong-wan/dongbei) vim/neovim 插件。
 
 ![瞅瞅啥效果啊](doc/screencast.gif)
+效果图环境 vim 8.0 (macOS+iterm2)，colorscheme desert，及辅助插件：
+
+- [airline](https://github.com/vim-airline/vim-airline) 提供 statusline
+- [neosnippet](https://github.com/Shougo/neosnippet.vim) 利用本插件提供补全
+- [matchup](https://github.com/andymass/vim-matchup) 利用本插件提供匹配跳转与高亮
 
 # 食用方法
 - [vim-plug](https://github.com/junegunn/vim-plug) 用户：
