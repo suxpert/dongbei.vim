@@ -1,5 +1,5 @@
 " Vim syntax file
-" Language: dongbei
+" Language:     dongbei-lang
 " Maintainer:   LiTuX
 
 " quit when a syntax file was already loaded
@@ -22,7 +22,7 @@ syn match   dongbeiSpecial          "炮\s*决"
 
 syn match   dongbeiIdentifier       "【[^#]\{-1,}】"
 syn match   dongbeiFunction         "\(整\)\@<=\s*\zs[^#]\{-1,}\ze\s*[（、。！]"
-syn match   dongbeiFunction         "^\s*\zs[^#]\{-1,}\ze\s*\(（[^#]*）\)\=\(阶\s*级\)\@<!\s*咋\s*整\s*[:：]"
+syn match   dongbeiFunction         "^\s*\zs[^#]\{-1,}\ze\s*\(（[^#]*）\)\=\(阶\s*级\s*\)\@<!咋\s*整\s*[:：]"
 
 " TODO, some of these matches might be buggy
 " syn match   dongbeiVariable         "\(削\|炮\s*决\)\@<=\s*\zs[^#的]\{-1,}\ze\s*[。！]"
@@ -127,7 +127,4 @@ hi def link dongbeiString       String
 hi def link dongbeiTodo         Todo
 hi def link dongbeiError        Error
 
-
 let b:current_syntax = "dongbei"
-
-"EOF

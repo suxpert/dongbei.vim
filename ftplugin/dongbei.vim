@@ -1,6 +1,6 @@
 " Vim filetype plugin file
-" Language:	dongbei
-" Maintainer:	LiTuX
+" Language:	    dongbei-lang
+" Maintainer:   LiTuX
 
 if exists("b:did_ftplugin")
     finish
