@@ -14,9 +14,25 @@ set cpo&vim
 
 setlocal suffixesadd=.dongbei
 setlocal comments=b:#,fb:-
-setlocal commentstring=#%s
+setlocal commentstring=#\ %s
+setlocal tabstop=4
+setlocal shiftwidth=4
 
 setlocal matchpairs+=【:】,“:”,「:」,（:）
+
+inoremap <buffer> ' “”<left>
+inoremap <buffer> \ 、
+inoremap <buffer> , ，
+inoremap <buffer> ! ！
+inoremap <buffer> ? ？
+inoremap <buffer> % 刨掉一堆堆
+" The following map conflict with snippets
+" inoremap <buffer> = 装
+" inoremap <buffer> + 加
+" inoremap <buffer> - 减
+" inoremap <buffer> * 乘
+" inoremap <buffer> / 除以
+" inoremap <buffer> _ 的老
 
 if exists("loaded_matchit")
     " TODO: 滚犊子吧 should only match 咋整
